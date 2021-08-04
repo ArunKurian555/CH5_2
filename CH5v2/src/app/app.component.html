@@ -1,0 +1,50 @@
+<ch5-triggerview [ngStyle]="activeflag" gestureable="false" class="main-swiper" activeView="{{ rout.active }}"
+  endless="false" style="margin: 0 0;" disableanimation="true">
+  <ch5-triggerview-child style="width: 100vw;">
+    <app-room-list></app-room-list>
+  </ch5-triggerview-child>
+  <ch5-triggerview-child style="width: 100vw;">
+    <app-utilities></app-utilities>
+  </ch5-triggerview-child>
+  <ch5-triggerview-child style="width: 100vw;">
+    <app-view7></app-view7>
+  </ch5-triggerview-child>
+  <ch5-triggerview-child style="width: 100vw;">
+    <app-view4></app-view4>
+  </ch5-triggerview-child>
+  <ch5-triggerview-child style="width: 100vw;">
+    <app-view5></app-view5>
+  </ch5-triggerview-child>
+  <ch5-triggerview-child style="width: 100vw;">
+    <app-num-lock></app-num-lock>
+  </ch5-triggerview-child>
+  <ch5-triggerview-child style="width: 100vw;">
+    <app-clock-timed></app-clock-timed>
+  </ch5-triggerview-child>
+</ch5-triggerview>
+<div class="aligner" [ngStyle]="activeflag1">
+
+  <button class="buttons" mat-fab (click)="onClick(1)">
+    <mat-icon class="fas fa-home fa-2x"></mat-icon>
+  </button>
+
+  <button class="buttons" mat-fab (click)="onClick(2)">
+    <mat-icon class="fas fa-user-shield fa-2x"></mat-icon>
+  </button>
+  
+  <button class="buttons" mat-fab (click)="onClick(3)">
+    <mat-icon class="fas fa-map fa-2x"></mat-icon>
+  </button>
+  
+  <button class="buttons" mat-fab (click)="onClick(6)">
+    <mat-icon class="fas fa-lock fa-2x"></mat-icon>
+  </button>
+   <!-- <button class="buttons" mat-fab (click)="onClick(5)">
+    <mat-icon class="fas fa-edit fa-2x"></mat-icon>
+  </button>  -->
+   <!-- <button class="buttons" mat-fab (click)="onClick(6)">
+    <mat-icon class="fas fa-calendar-alt fa-2x"></mat-icon>
+  </button> -->
+
+
+</div>
