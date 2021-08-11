@@ -11,6 +11,17 @@ import { ClockTimedComponent } from './clock-timed/clock-timed.component';
 import { RoomListComponent } from './room-list/room-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
+import { FormsModule } from '@angular/forms';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { AreapopComponent } from './areapop/areapop.component';
+import { ScenepopComponent } from './scenepop/scenepop.component';
+import { ConfirmationComponent } from './confirmation/confirmation.component';
+import { DmxpopComponent } from './dmxpop/dmxpop.component';
+import { ColorChromeModule } from 'ngx-color/chrome';
+import { ColorSketchModule } from 'ngx-color/sketch';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 
 const configuration: Partial<WebXPanelConfigParams> = { 
   // host: '', // defaults to window.location.host
@@ -28,7 +39,7 @@ const webXPanelFactory = () => () => {
    } 
 } 
 
-WebXPanel.addEventListener(WebXPanelEvents.LICENSE_WS, (detail : any) => { 
+WebXPanel.addEventListener(WebXPanelEvents.LICENSE_WS, (detail) => { 
  const { 
    resourceAvailable, 
    controlSystemSupportsLicense, 
@@ -53,13 +64,18 @@ WebXPanel.addEventListener(WebXPanelEvents.CONNECT_CIP, (detail :any) => {
     AppComponent,
     NumLockComponent,
     ClockTimedComponent,
-    RoomListComponent
+    RoomListComponent,
+    AreapopComponent,
+    ScenepopComponent,
+    ConfirmationComponent,
+    DmxpopComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule,MatSliderModule, FormsModule, MatGridListModule, MatSlideToggleModule,ColorSketchModule,ColorChromeModule
   ],
   providers: [
     { provide: APP_BASE_HREF, useValue: './' },
